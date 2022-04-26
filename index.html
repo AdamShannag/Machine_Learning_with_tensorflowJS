@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Tensorflow Test</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>pima-indians-diabetes</h1>
+        </div>
+        <div class="row">
+            <h5>Some test data :</h5>
+            <pre><code>[6.0, 148.0, 72.0, 35.0, 0.0, 33.6, 0.627, 50.0] => Yes (expected Yes)
+[1.0, 85.0, 66.0, 29.0, 0.0, 26.6, 0.351, 31.0] => No (expected No)
+[8.0, 183.0, 64.0, 0.0, 0.0, 23.3, 0.672, 32.0] => Yes (expected Yes)
+[1.0, 89.0, 66.0, 23.0, 94.0, 28.1, 0.167, 21.0] => No (expected No)
+[0.0, 137.0, 40.0, 35.0, 168.0, 43.1, 2.288, 33.0] => Yes (expected Yes)</code></pre>
+        </div>
+        <form>
+            <div class="row">
+                <label for="preg">Number of times pregnant</label>
+                <input type="number" id="preg" class="value" placeholder="6" />
+            </div>
+
+            <div class="row">
+                <label for="pla">Plasma glucose concentration a 2 hours in an oral glucose tolerance
+            test</label
+          >
+          <input type="number" id="pla" class="value" placeholder="148" />
+        </div>
+
+        <div class="row">
+          <label for="dia">Diastolic blood pressure (mm Hg)</label>
+                <input type="number" id="dia" class="value" placeholder="72" />
+            </div>
+
+            <div class="row">
+                <label for="tri">Triceps skin fold thickness (mm)</label>
+                <input type="number" id="tri" class="value" placeholder="35" />
+            </div>
+
+            <div class="row">
+                <label for="hour">2-Hour serum insulin (mu U/ml)</label>
+                <input type="number" id="hour" class="value" placeholder="0" />
+            </div>
+
+            <div class="row">
+                <label for="bmi">Body mass index (weight in kg/(height in m)^2)</label
+          >
+          <input type="number" id="bmi" class="value" placeholder="33.6" />
+        </div>
+
+        <div class="row">
+          <label for="pedigree">Diabetes pedigree function</label>
+                <input type="number" id="pedigree" class="value" placeholder="0.627" />
+            </div>
+            <div class="row">
+                <label for="age">Age (years)</label>
+                <input type="number" id="age" class="value" placeholder="50" />
+            </div>
+            <div class="row">
+                <input type="button" value="Predict" class="button-primary u-full-width" id="predict" />
+            </div>
+        </form>
+        <div class="row">
+            <h3 style="text-align: center" id="diabetes"></h3>
+        </div>
+    </div>
+
+    <!-- Import tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
